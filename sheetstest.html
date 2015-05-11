@@ -1,0 +1,30 @@
+<head>
+  <title>sheetstest</title>
+<meta name="google-site-verification" content="oxzKrF6dZQQs6-wTJOYxSN0pHU4_Gp-c0Fv1pcP2taQ" />
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1> {{> hello}}
+</body>
+<template name="hello">
+  <div>
+    name:
+    <input type="text" placeholder="spreadsheet name" class="js-spreadsheet-name" value="1Zxv_wInGg7QlgX53YGvJP945BTYj3iCBwGwWZt0prlI">
+  </div>
+  <div>
+    worksheet:
+    <input type="text" placeholder="worksheet id" class="js-worksheet-id" value="1">
+  </div>
+  <div>
+    range:
+    <input type="text" placeholder="range" class="js-range">
+  </div>
+  <button class="js-get-data">Get Data</button>
+
+  {{#each results}}
+    column: {{column}}
+    row: {{row}}
+    value: {{value}}
+  {{/each}}
+</template>
+
